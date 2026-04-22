@@ -1051,25 +1051,30 @@ FACTORIAL_5=120
 como `CUADRADO(x)` y una **función real** como `sumar(a, b)`.
 ¿En qué etapa "desaparece" cada una? ¿Cuál tiene verificación de tipos?
 
-> **R:**
+> **R:** la macro funcion es un reemplazo de codigo que hace el preprocesamiento antes de empezar a compilar, por eso desaparece en esa etapa. La funcion real es un bloque de codigo que se mantiene hasta el enlazado y ahi el programa la usa, tiene verificacion de tipos de datos.
 
 ---
 
 **P17.** ¿Qué diferencia hay entre un símbolo de tipo `T` y uno de tipo `D`
 en la salida de `nm`? ¿En qué sección del archivo objeto vive cada uno?
 
-> **R:**
+> **R:** el simbolo tipo "T" identifica funciones y codigo ejecutable guardandose en .text . el simbolo tipo "D" identifica variables globales que son inicializadas por el usuario guardandose en .data
 
 ---
 
 **P18.** (Bonus) Ejecutá `otool -L programa` (macOS) o `ldd programa` (Linux)
 y copiá la salida.
 
-> **R:**
+> **R:** ntdll.dll => /c/windows/SYSTEM32/ntdll.dll (0x7ffce6ce0000)
+        ntdll.dll => /c/Windows/SysWOW64/ntdll.dll (0x77520000)
+        wow64.dll => /c/windows/System32/wow64.dll (0x7ffce5690000)
+        wow64base.dll => /c/windows/System32/wow64base.dll (0x7ffce5d60000)
+        wow64win.dll => /c/windows/System32/wow64win.dll (0x7ffce4ba0000)
+        wow64con.dll => /c/windows/System32/wow64con.dll (0x7ffce4b70000)
 
 ¿Por qué `libc` no hubo que especificarla explícitamente al enlazar con `gcc`?
 
-> **R:**
+> **R:** porque gcc incluye la biblioteca de libc automaticamente
 
 ---
 
