@@ -1271,6 +1271,7 @@ a. ¿Cuántas veces se evalúa `n++`? ¿Por qué?
 b. ¿Cuál sería el resultado? ¿Es el esperado?
 c. ¿Cómo se resolvería este problema usando una función real en lugar de una macro?
 
+
 ### E2 — Provocar y leer errores del compilador
 
 a. **Error léxico:** en `programa.c`, escribí una cadena sin cerrar: `printf("hola`. Intentá compilar con `gcc -S programa.c`. ¿En qué etapa falla y qué dice el mensaje de error?
